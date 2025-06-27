@@ -9,6 +9,7 @@ const PORT = 5000;
 app.use(cors());
 app.use(express.json());
 app.use(router);
+
 app.get("/", (req, res) => {
   res.send({ success: true, message: "server Is running" });
 });
