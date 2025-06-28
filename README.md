@@ -213,3 +213,7 @@ The server will start on ` http://localhost:5000`.
 }
 
 ```
+
+## Live Deployment Link  :  ` https://library-management-rouge-nine.vercel.app`
+
+## GitHub Repository Link : ` https://github.com/shakhawat2323/Library-Management.git `
