@@ -1,7 +1,7 @@
-import { Schema, model, Document } from "mongoose";
+import { Schema, model, Document, Types } from "mongoose";
 
 export interface IBorrow extends Document {
-  book: string;
+  book: Types.ObjectId;
   quantity: number;
   dueDate: Date;
 }

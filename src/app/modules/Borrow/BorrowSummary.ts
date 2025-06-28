@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { Borrow } from "./Borrow.model";
 
-const borrowedBooksSummary = async (req: Request, res: Response) => {
+const BorrowedBooks = async (req: Request, res: Response) => {
   try {
     const summary = await Borrow.aggregate([
       {
@@ -33,17 +33,17 @@ const borrowedBooksSummary = async (req: Request, res: Response) => {
       },
     ]);
 
-    return res.status(200).json({
+    res.status(200).json({
       success: true,
       message: "Borrowed books summary retrieved successfully",
       data: summary,
     });
   } catch (error) {
-    return res.status(500).json({
+    res.status(500).json({
       success: false,
       message: "Error retrieving borrowed books summary",
     });
   }
 };
 
-export { borrowedBooksSummary };
+export { BorrowedBooks };

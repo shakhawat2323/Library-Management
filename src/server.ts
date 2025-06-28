@@ -5,9 +5,9 @@ import Config from "./app/Config";
 import mongoose from "mongoose";
 const app = express();
 const PORT = 5000;
-
-app.use(cors());
 app.use(express.json());
+app.use(cors());
+
 app.use(router);
 
 app.get("/", (req, res) => {
