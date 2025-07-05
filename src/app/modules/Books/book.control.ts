@@ -26,7 +26,7 @@ const getBooksData = async (req: Request, res: Response) => {
 
     const filter: any = {};
     if (genre) {
-      filter.genre = new RegExp(`${genre}$`, "i");
+      filter.genre = new RegExp(`${genre}$`);
     }
 
     const data = await Book.find(filter)
