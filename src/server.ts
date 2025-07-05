@@ -11,7 +11,7 @@ app.use(cors());
 app.use(router);
 
 app.get("/", (req, res) => {
-  res.send({ success: true, message: "server Is running" });
+  res.send("Server Is Running");
 });
 app.listen(Config.port, () => {
   console.log(`Server Is running ${PORT}`);

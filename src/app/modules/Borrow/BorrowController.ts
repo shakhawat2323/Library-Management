@@ -17,7 +17,7 @@ export const BorrowBook = async (req: Request, res: Response) => {
         foundBook.copies -= quantity;
 
         if (foundBook.copies === 0) {
-          foundBook.available = false;
+          foundBook.available = 0;
         }
 
         await foundBook.save();

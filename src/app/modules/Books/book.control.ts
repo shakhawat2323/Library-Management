@@ -22,7 +22,7 @@ const getBooksData = async (req: Request, res: Response) => {
   try {
     const genre = req.query.filter as string;
     const sortbooks = req.query.sort === "desc" ? -1 : 1;
-    const bookslimit = parseInt(req.query.limit as string) || 10;
+    const bookslimit = parseInt(req.query.limit as string);
 
     const filter: any = {};
     if (genre) {

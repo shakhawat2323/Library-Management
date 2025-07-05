@@ -24,7 +24,7 @@ const getBooksData = async (req, res) => {
     try {
         const genre = req.query.filter;
         const sortbooks = req.query.sort === "desc" ? -1 : 1;
-        const bookslimit = parseInt(req.query.limit) || 10;
+        const bookslimit = parseInt(req.query.limit);
         const filter = {};
         if (genre) {
             filter.genre = new RegExp(`${genre}$`, "i");

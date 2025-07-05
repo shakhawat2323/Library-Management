@@ -14,7 +14,7 @@ app.use(express_1.default.json());
 app.use((0, cors_1.default)());
 app.use(Router_1.default);
 app.get("/", (req, res) => {
-    res.send({ success: true, message: "server Is running" });
+    res.send("Server Is Running");
 });
 app.listen(Config_1.default.port, () => {
     console.log(`Server Is running ${PORT}`);
