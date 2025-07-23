@@ -8,11 +8,7 @@ const bookSchema = new Schema<IBook>(
       required: [true, "Title is required"],
       trim: true,
     },
-    img: {
-      type: String,
-      required: [true, "Title is required"],
-      trim: true,
-    },
+
     author: {
       type: String,
       required: [true, "Author is required"],
@@ -53,19 +49,10 @@ const bookSchema = new Schema<IBook>(
         message: "Copies must be an integer",
       },
     },
-    price: {
-      type: Number,
-      required: true,
-      min: 0,
-    },
+
     available: {
-      type: Number,
+      type: Boolean,
       required: [true, "Copies count is required"],
-      min: [0, "Copies cannot be negative"],
-      validate: {
-        validator: Number.isInteger,
-        message: "Copies must be an integer",
-      },
     },
   },
   {

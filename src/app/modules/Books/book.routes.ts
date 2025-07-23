@@ -11,7 +11,7 @@ const BooksRouter = Router();
 BooksRouter.post("/", CreateData);
 BooksRouter.get("/", getBooksData);
 BooksRouter.get("/:bookId", GetbookByIdteData);
-BooksRouter.patch("/:bookId", GetbookUpdateData);
+BooksRouter.put("/:bookId", GetbookUpdateData);
 BooksRouter.delete("/:bookId", DeleteData);
 
 export default BooksRouter;

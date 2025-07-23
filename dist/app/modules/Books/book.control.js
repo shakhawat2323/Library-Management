@@ -27,7 +27,7 @@ const getBooksData = async (req, res) => {
         const bookslimit = parseInt(req.query.limit);
         const filter = {};
         if (genre) {
-            filter.genre = new RegExp(`${genre}$`, "i");
+            filter.genre = new RegExp(`${genre}$`);
         }
         const data = await book_model_1.Book.find(filter)
             .sort({ title: sortbooks })
